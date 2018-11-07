@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /post/
+RewriteRule ^([a-z0-9_-]+)\.xhtml$ article.php?url=$1 [L]
+RewriteRule ^([a-z0-9_-]+)/page-([0-9]+)\.xhtml$ article.php?url=$1&page=$2 [L]
+RewriteRule ^category/([a-z0-9_-]+)\.xhtml$ category.php?url=$1 [L]
+RewriteRule ^category/([a-z0-9_-]+)/add\.xhtml$ category.php?url=$1&add [L]
+RewriteRule ^category/([a-z0-9_-]+)/page-([0-9]+)\.xhtml$ category.php?url=$1&page=$2 [L]
+RewriteRule ^category/([a-z0-9_-]+)/([a-z]+)/([a-z0-9_-]+)\.xhtml$ category.php?url=$1&act=$2&blog=$3 [L]
+RewriteRule ^comment/([a-z0-9_-]+)\.xhtml$ comment.php?url=$1 [L]
+RewriteRule ^comment/([a-z0-9_-]+)/page-([0-9]+)\.xhtml$ comment.php?url=$1&page=$2 [L]
+RewriteRule ^comment/([a-z0-9_-]+)/([a-z]+)/([0-9]+)\.xhtml$ comment.php?url=$1&act=$2&id=$3 [L]
+RewriteRule ^files/([a-z0-9_-]+)\.xhtml$ files.php?url=$1 [L]
+RewriteRule ^files/([a-z0-9_-]+)/([a-z]+)/([0-9]+)\.xhtml$ files.php?url=$1&act=$2&id=$3 [L]
+RewriteRule ^files/([a-z0-9_-]+)/upload\.xhtml$ files.php?url=$1&upload [L]
+RewriteRule ^rss\.xml$ index.php?mode=rss [L]
