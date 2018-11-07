@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteBase /shoutbox/
-RewriteRule ^([a-z]+)/([0-9]+)\.xhtml$ index.php?act=$1&id=$2 [L]
